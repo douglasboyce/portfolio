@@ -99,7 +99,7 @@ $(document).on("click", 'button', function () {
 
           // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
           console.log('i = ' + i)
-          if (i == 0 || i == 2 || i == 4) { alert(i); $("#gifs-1").prepend(animalDiv); } 
+          if (i == 0 || i == 2 || i == 4) { $("#gifs-1").prepend(animalDiv); } 
           else {   $("#gifs-2").prepend(animalDiv); }
         
         }
