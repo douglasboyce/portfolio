@@ -7,17 +7,7 @@
   <title>Contact | Douglas Boyce</title>
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-  <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
-  <script type="text/javascript">
-    (function () {
-      emailjs.init("dboyce77@gmail.com");
-    })();
-
-    // User ID: user_JhdaW8xWTPXxbxZNFPQCs
-    //Access token: 3c45ab3f0acf3d772e4074850497c26e
-
-  </script>
-
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -41,18 +31,19 @@
         <ul>
           <li>
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="John Smith" required="required">
+            <input type="text" id="name" name="name" placeholder="Enter Name" required="required">
           </li>
           <li>
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="example@gmail.com" required="required">
+            <input type="email" id="email" name="email" placeholder="Enter email address" required="required">
           </li>
           <li>
             <label for="message">Message</label>
-            <textarea id="message" name="message" required="required"></textarea>
+            <textarea id="message" name="Enter a message" required="required"></textarea>
           </li>
         </ul>
-        <input type="submit">
+        <input id='btn-submit' type="submit">
+        <!-- <button id="btn-submit" type="submit">Submit</button> -->
       </form>
 
     </section>
@@ -66,3 +57,15 @@
     </div>
   </footer>
 </body>
+
+<script type='text/javascript'>
+// Prevent the form to be submitted on ENTER
+$('#contact-form').submit(function(e){
+  e.preventDefault();
+});
+
+$('#btn_submit').click(function(){
+  console.log('I have been clicked');
+});
+  
+</script>
